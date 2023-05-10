@@ -2,15 +2,16 @@
     internal class Program {
         static void Main(string[] args) {
             Meister meister = new Meister();
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter0"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter1"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter2"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter3"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter4"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter5"});
+            meister.Lehrlingeinstellen("Peter0");
+            meister.Lehrlingeinstellen("Peter1");
+            meister.Lehrlingeinstellen("Peter2");
+            meister.Lehrlingeinstellen("Peter3");
+            meister.Lehrlingeinstellen("Peter4");
+            meister.Lehrlingeinstellen("Peter5");
             Tnt tnt = new Tnt();
             tnt.TntEvent += meister.Beileid;
             meister.tnt = tnt;
+            
             meister.ZeigeLehrlinge();
             for (int i = 0; i < 20; i++) {
                 meister.Gibanweisung();

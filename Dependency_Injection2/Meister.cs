@@ -4,6 +4,9 @@
         public Tnt tnt { get; set; }
         Schaufel schaufel = new Schaufel();
         public int MyProperty { get; set; }
+        public void Lehrlingeinstellen(string name) {
+            Lehrlinge.Add(new Lehrling() { Name = name});
+        }
         public void ZeigeLehrlinge() {
             if (Lehrlinge.Count == 0) {
                 Console.WriteLine("Zur zeit habe ich keine Lehrlinge");
@@ -25,10 +28,11 @@
                 }
             }else {
                 Console.WriteLine("Sorry, alle Lehrlinge sind verbraucht");
+                Console.WriteLine("");
             }
         }
         public void Beileid(object source, TntEventArgs e) {
-            Console.WriteLine($"Mein Beileid, {e.person.Name} ist bei grabung mit TnT gestorben.");
+            Console.WriteLine($"Mein Beileid, {e.person.Name} ist bei der Arbeit mit TnT gestorben.");
             Lehrlinge.Remove(e.person);
         }
     }
