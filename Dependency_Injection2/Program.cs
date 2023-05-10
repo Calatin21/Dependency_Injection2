@@ -5,7 +5,9 @@
             meister.Lehrlinge.Add(new Lehrling() { Name = "Peter0"});
             meister.Lehrlinge.Add(new Lehrling() { Name = "Peter1"});
             meister.Lehrlinge.Add(new Lehrling() { Name = "Peter2"});
-            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter3" });
+            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter3"});
+            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter4"});
+            meister.Lehrlinge.Add(new Lehrling() { Name = "Peter5"});
             Tnt tnt = new Tnt();
             tnt.TntEvent += meister.Beileid;
             meister.tnt = tnt;
@@ -14,6 +16,7 @@
                 meister.Gibanweisung();
             }
             meister.ZeigeLehrlinge();
+            IGrabable schueppe = new Schaufel();
         }
     }
 }

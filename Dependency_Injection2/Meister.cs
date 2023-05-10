@@ -9,8 +9,9 @@
                 Console.WriteLine("Zur zeit habe ich keine Lehrlinge");
             } 
             for (int i = 0; i < Lehrlinge.Count; i++) {            
-                Console.WriteLine($"Lehrling Nummer {i+1} heisst {Lehrlinge[i].Name}");
+                Console.WriteLine($"Lehrling Nummer {i+1} heißt {Lehrlinge[i].Name}");
             }
+            Console.WriteLine("");
         }
         public void Gibanweisung() {
             if (Lehrlinge.Count > 0) {
